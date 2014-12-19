@@ -22,7 +22,7 @@ My script has 3 parts.
 
 We get the "mergedData" variable with the full tidy data set
 
-2. The second part is connected with our second task: creating a new file with tidy data including means of different columns. Having a fully constructed dataset, we can iterate over it and find columns we want to extract. In our case we are interested in extracting columns with 'mean()' and 'std()' in their names. I am doing it with a While loop checking if any of these words appears in the columns' names. The function grepl() is crucial. I add columns to a vector I will use later to extract them from the original dataset. I end up with a variable newset that subsets the dataset created in the paragraph 1 with a vector with columns' numbers. 
+2.The second part is connected with our second task: creating a new file with tidy data including means of different columns. Having a fully constructed dataset, we can iterate over it and find columns we want to extract. In our case we are interested in extracting columns with 'mean()' and 'std()' in their names. I am doing it with a While loop checking if any of these words appears in the columns' names. The function grepl() is crucial. I add columns to a vector I will use later to extract them from the original dataset. I end up with a variable newset that subsets the dataset created in the paragraph 1 with a vector with columns' numbers. 
 
 3.The final part is about creating a new shorter dataset with avarages of different columns. In this final part we get the mean of the columns per subject per activity. I use the function aggregate() which does everything for us:) The only thing to remember is that we have to omit the first two columns with Subject.ID and Activity since we do not want to get their means. 
 
